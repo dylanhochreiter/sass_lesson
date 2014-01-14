@@ -1,0 +1,27 @@
+
+nav{
+	border: 2px solid yellow;
+	@include clearfix;
+	
+	ul{ margin: 0; padding: 0; }
+
+	@media (min-width: $mediumScreen){
+		ul{
+			@include borderRadius(10px);
+		}
+	}
+	@media (min-width: $largeScreen){
+		ul{ width: 960px; margin: 0; padding: 0; text-decoration: none;
+
+			li{ float: left; margin-left: 1em; border: 1px solid black;@include borderRadius(20px); &:first-child{ margin-left:0;}
+
+				a{
+
+					a:hover{
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}
